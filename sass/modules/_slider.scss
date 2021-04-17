@@ -1,0 +1,38 @@
+$totalslider:3;
+$timeslider:3s;
+$duration : $totalslider * $timeslider;
+
+
+.slider {
+    margin: 0px auto;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    .photo {
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        opacity: 0;
+        animation-name: animation-slider;
+        animation-duration: $duration;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes animation-slider {
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+}
+
+@for $index from 1 to $totalslider + 1 {
+    .photo:nth-child(#{$index}){
+        animation-delay: $duration - ($timeslider * $index);
+    }
+}

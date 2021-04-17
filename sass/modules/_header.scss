@@ -1,0 +1,42 @@
+$gold: gold;
+header {
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+
+    .logo {
+        font-weight: 300;
+        line-height: 1;
+        text-transform: uppercase;
+        span {
+            font-weight: 700;
+        }
+    
+        .sub-info {
+            font-size: 12px;
+            letter-spacing: 4px;
+    
+        }
+    }
+    
+    ul {
+        li {
+            list-style: none;
+            display: inline;
+            font-weight: 700;
+            margin-left: 20px;
+            text-transform: uppercase;
+            &:hover{
+                color: $gold;
+            }
+        }
+    
+        .active {
+            color:$gold;
+        }
+    }
+
+}
+
